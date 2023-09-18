@@ -1,1010 +1,1167 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
-
+   
+<!-- Mirrored from slimhamdi.net/monji/demos/light-skinswitcher-sound.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 17 Sep 2023 14:53:05 GMT -->
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="Name of your web site" />
-  <meta name="author" content="Marketify" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link rel="shortcut icon" type="x-icon" href="assets/img/logo/logo.png" />
-  <title>Husnain Akhtar - Personal Portfolio</title>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Kristi&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/modalbox.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-  <!--[if lt IE 9]>
-      <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-  <div id="preloader">
-    <div class="loader_line"></div>
-  </div>
-
-  <div class="elisc_tm_all_wrap w-full h-auto clear-both float-left relative" data-magic-cursor="show"
-    data-enter="fadeInLeft" data-exit>
-    <div class="elisc_tm_topbar fixed top-0 left-0 right-0 h-[50px] bg-white z-[15] hidden">
-      <div class="topbar_inner w-full h-full clear-both flex items-center justify-between py-0 px-[20px]">
-        <div class="logo" data-type="image">
-          <a style="background-color: white !important" class="text" href="#home"><span>Husnain Akhtar</span></a>
-          <a class="image" href="#home"><img class="max-w-[100px] max-h-[40px]" src="assets/img/logo/logo.png"
-              alt /></a>
-          <div>
-
-            <a style="color: white !important" class="text" href="#home"><span>Husnain Akhtar</span></a>
-          </div>
-        </div>
-        <div class="trigger">
-          <div class="hamburger hamburger--slider">
-            <div class="hamburger-box">
-              <div class="hamburger-inner"></div>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="preconnect" href="https://fonts.googleapis.com/">
+      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+      <title>Monji - Personal Portfolio HTML Template</title>
+      <!-- Main CSS File -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Main Color File -->
+      <link rel="stylesheet" type="text/css" href="css/skins/green.css">
+      <!-- Color Switcher - Only Demo -->
+      <link rel="stylesheet" type="text/css" href="css/colorswitcher.css">
+   </head>
+   <body>
+       <!-- Color Switcher Starts / Only Demo -->
+       <div id="switcher" class="switcher">
+         <p>Color Switcher</span>
+         <div>
+            <span id="yellow"></span>
+            <span id="red"></span>
+            <span id="green"></span>
+            <span id="green2"></span>
+            <span id="orange"></span>
+            <span id="blue"></span>
+            <span id="blue2"></span>
+            <span id="pink"></span>
+            <span id="goldenrod"></span>
+            <span id="pink2"></span>
+         </div>
+         <span id="toggle-switcher">
+            <i class="icon-cog"></i>
+         </span>
+       </div>
+       <!-- Color Switcher Ends / Only Demo -->
+       <!-- Sound Dialog Modal Starts -->
+       <div id="soundmodal" class="soundmodal">
+         <div class="soundmodal-content">
+            <img class="sound-icon" src="img/volume.png" alt="">
+            <p>Allow Sound Effects ?</p>
+            <div class="buttons">
+               <span id="no" class="no">No</span>
+               <span id="yes" class="yes">Yes</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="elisc_tm_mobile_menu">
-      <div class="inner relative w-full h-full text-right px-[20px] pt-[70px] pb-[20px]">
-        <div class="wrapper">
-          <div class="avatar w-[70px] h-[70px] relative float-right mb-[50px]">
-            <div class="image absolute inset-0 bg-no-repeat bg-cover bg-center" data-img-url="assets/img/about/1.jpg">
+         </div>
+       </div>
+      <!-- Sound Dialog Modal Ends -->
+      <!-- Loader Starts -->
+      <div class="loader-wrapper">
+         <div class="loader">
+         </div>
+         <div class="loader-section section-left"></div>
+         <div class="loader-section section-right"></div>
+         </div>
+      <!-- Loader Ends -->
+      <!-- Home Section Starts -->
+      <div class="main-section home active">
+         <!-- Background shape Starts -->
+         <img src="img/shape3.png" alt="">
+         <!-- Background shape Ends -->
+         <!-- Main Home Content Starts -->
+         <div class="home-content">
+            <div>
+               <span class="hello">Hello!</span>
+               <h1>I am <span>Steven</span>
+               </h1>
+               <p>Freelance web developer with 7 years experience living in New York and working with Envato.</p>
             </div>
-          </div>
-          <div class="menu_list w-full h-auto clear-both float-left mb-[50px]">
-            <ul class="transition_link m-0">
-              <li class="active mb-[7px]">
-                <a class="text-dark-color" href="#home">Home</a>
-              </li>
-              <li class="mb-[7px]">
-                <a class="text-dark-color" href="#news">Skills</a>
-              </li>
-              <li class="mb-[7px]">
-                <a class="text-dark-color" href="#portfolio">Experience</a>
-              </li>
-              <li class="mb-[7px]">
-                <a class="text-dark-color" href="#about">About</a>
-              </li>
-              <li class="mb-[7px]">
-                <a class="text-dark-color" href="#service">Services</a>
-              </li>
-              <li class="mb-[7px]">
-                <a class="text-dark-color" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="social w-full float-left mb-[5px]">
+         </div>
+         <!-- Main Home Content Ends -->
+         <!-- Call To Actions Starts -->
+         <div class="call-to-actions">
+            <!-- Open Portfolio Section Starts -->
+            <button id="open-portfolio" class="btn-primary">
+               <span class="letter-wrap">My Portfolio</span>
+            </button>
+            <!-- Open Portfolio Section Ends -->
+            <!-- Open About Section Starts -->
+            <a href="#" id="open-about" class="btn-secondary">
+               <div>
+                  <span> About Me </span>
+                  <span> About Me </span>
+               </div>
+            </a>
+            <!-- Open About Section Ends -->
+         </div>
+         <!-- Call To Actions Ends -->
+         <!-- Contacts Starts -->
+         <div class="contacts">
             <ul>
-              <li class="mr-[8px] inline-block">
-                <a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color"
-                  href="https://www.facebook.com/hmalik.malik12334"><i
-                    class="icon-facebook-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a>
-              </li>
-              <li class="mr-[8px] inline-block">
-                <a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color"
-                  href="https://twitter.com/ooyejimmy"><i
-                    class="icon-twitter-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a>
-              </li>
-              <li class="mr-[8px] inline-block">
-                <a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color"
-                  href="https://www.linkedin.com/in/husnain-akhtar/"><i
-                    class="icon-linkedin-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a>
-              </li>
-              <li class="mr-[8px] inline-block">
-                <a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color"
-                  href="https://www.linkedin.com/in/husnain-akhtar/"><i
-                    class="icon-linkedin-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a>
-              </li>
+               <li>+39 18 73 28 19</li>
+               <li>contact@steven.net</li>
+               <li>London, England</li>
             </ul>
-          </div>
-          <div class="copyright w-full float-left">
-            <p class="text-dark-color">Copyright &copy; 2023</p>
-            <p class="text-dark-color">Husnain Akhtar</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="elisc_tm_sidebar w-[370px] h-[100vh] fixed left-0 top-0 border-solid border-[rgba(85,82,124,.1)] border-r">
-      <div class="sidebar_inner w-full float-left h-auto clear-both text-center">
-        <div class="author w-full float-left pt-[60px]">
-          <div class="image relative w-[118px] inline-block">
-            <img class="relative opacity-0 min-w-full" src="assets/img/thumbs/1-1.jpg" alt />
-            <div class="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-full"
-              data-img-url="assets/img/about/1.png"></div>
-          </div>
-          <div class="name w-full float-left mt-[-19px]">
-            <h3>
-              <span>Husnain Akhtar<span class="back">Husnain Akhtar</span></span>
-            </h3>
-          </div>
-        </div>
-        <div class="menu scrollable w-full float-left">
-          <ul class="transition_link h-full flex items-center justify-center flex-col">
-            <li class="active mb-[15px]"><a href="#home">Home</a></li>
-            <li class="mb-[15px]"><a href="#news">Skills</a></li>
-            <li class="mb-[15px]"><a href="#portfolio">Experience</a></li>
-            <li class="mb-[15px]"><a href="#service">Services</a></li>
-            <li class="mb-[15px]"><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="copyright absolute bottom-[50px]">
-          <div class="social w-full float-left mb-[7px]">
-            <ul>
-              <li class="mr-[3px] inline-block">
-                <a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color"
-                  href="https://www.facebook.com/hmalik.malik12334"><i
-                    class="icon-facebook-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a>
-              </li>
-              <li class="mr-[3px] inline-block">
-                <a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color"
-                  href="https://twitter.com/ooyejimmy"><i
-                    class="icon-twitter-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a>
-              </li>
-              <li class="inline-block">
-                <a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color"
-                  href="https://www.linkedin.com/in/jamil-ur-rahman-2024ab227/"><i
-                    class="icon-linkedin-1 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a>
-              </li>
-              <li class="inline-block">
-                <a class="w-[40px] h-[40px] inline-block relative rounded-full text-dark-color"
-                  href="https://github.com/husnain52"><i
-                    class="fa fa-github absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[16px]"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="text py-0 px-[50px]">
-            <p>Copyright © 2023 Husnain Akhtar. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="elisc_tm_mainpart w-full min-h-[100vh] clear-both float-left pl-[370px]">
-      <div class="mainpart_inner w-full min-h-[100vh] clear-both float-left relative">
-        <div class="elisc_tm_section animated" id="home">
-          <div class="elisc_tm_home w-full min-h-[100vh] clear-both float-left bg-[#EFFBF8]">
-            <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
-              <div class="details w-full min-h-[100vh] flex items-center">
-                <div class="left w-1/2">
-                  <div class="title w-full float-left mb-[21px]">
-                    <h3 class="font-extrabold text-[60px] leading-[70px]">
-                      Hi, I'm
-                      <span class="text-blue-color">Husnain Akhtar!</span>
-                    </h3>
-                    <h3 class="font-extrabold text-[60px] leading-[70px]">
-                      <span class="cd-headline clip">
-                        <span class="blc">Creative</span>
-                        <span class="cd-words-wrapper">
-                          <b class="is-visible">JavaScript Expert</b>
-                          <b>Code Optimizer</b>
-                          <b >Code Architect</b>
-                          <b>Software Innovator</b>
-                        </span>
-                      </span>
-                    </h3>
-                  </div>
-                  <div class="subtitle wfll max-w-[80%] float-left mb-[40px]">
-                    <p>
-                      I'm an experienced Web Developer &amp; Front-end
-                      Developer based in Pakistan with over
-                      <span class="text-blue-color"> 03+ years</span> of
-                      expertise. My passion for creating exceptional web
-                      experiences motivates me to stay updated with the latest
-                      web development trends and technologies
-                    </p>
-                  </div>
-                  <div class="buttons w-full float-left flex items-center mb-[150px]">
-                    <div class="elisc_tm_button transition_link">
-                      <a href="#portfolio">Know more?</a>
-                    </div>
-                    <div class="elisc_tm_button transition_link" data-style="border">
-                      <a href="#contact">Let's talk</a>
-                    </div>
-                  </div>
-                  <div class="info w-full float-left">
-                    <ul class="relative">
-                      <li class="pl-[15px]">
-                        <a class="text-[#130F49] font-semibold text-[18px]" href="tel:+92 347 6293 398">+92 347 6293 398</a>
-                      </li>
-                      <li class="pl-[15px]">
-                        <a class="text-[#130F49] font-semibold text-[18px]"
-                          href="mailto:husnainakhtar06@gmail.com">husnainakhtar06@gmail.com</a>
-                      </li>
-                      <li class="pl-[15px]">
-                        <a class="href_location text-[#130F49] font-semibold text-[18px]" href="#">Faisal Avenue
-                          Islamabad, Pakistan</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="right w-1/2 pl-[50px]">
-                  <img src="assets/img/about/2.png" alt />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="elisc_tm_section" id="about">
-          <div class="elisc_tm_about w-full float-left pt-[130px]">
-            <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
-              <div class="elisc_tm_biography w-full float-left flex mb-[40px]">
-                <div class="left w-[40%]">
-                  <div class="title w-full float-left mb-[40px]">
-                    <span class="mini block uppercase font-medium mb-[12px]">- Nice to meet you!</span>
-                    <h3 class="name font-extrabold text-[40px]">
-                      Husnain Akhtar
-                    </h3>
-                    <span class="job font-semibold text-[20px] text-dark-color">
-                      <span class="cd-headline clip">
-                        <span class="blc">Web Developer &amp;</span>
-                        <span class="cd-words-wrapper">
-                          <b class="is-visible">Code Architect</b>
-                          <b>Algorithm Developer</b>
-                          <b>Code Optimizer</b>
-                          <b>Software Innovator</b>
-                        </span>
-                      </span>
-                    </span>
-                  </div>
-                  <div class="elisc_tm_button transition_link">
-                    <a href="#portfolio">More about me</a>
-                  </div>
-                </div>
-                <div class="right w-[60%]">
-                  <div class="text w-full float-left mb-[44px]">
-                    <p class="mb-[30px]">
-                      Hello there! My name is
-                      <span class="text-yellow-color">Husnain Akhtar</span>.
-                      I'm a dedicated Front-End Web Developer based in
-                      Pakistan with over 3 years of experience.
-                    </p>
-
-                    <p>
-                      My passion for creating exceptional web experiences
-                      drives me to stay updated with the latest trends. I
-                      specialize in React.js, Next.js, Tailwind CSS, Antd UI,
-                      and React-Bootstrap, ensuring your web project is not
-                      only visually appealing but also responsive,
-                      SEO-friendly, and delivered on time. I'm committed to
-                      quality, transparent communication, and client
-                      satisfaction. Let's collaborate to bring your web
-                      project to life.
-                    </p>
-                  </div>
-                  <div class="info w-full float-left">
-                    <ul>
-                      <li class="mr-[40px] mb-[20px] inline-block">
-                        <span class="block uppercase underline">Age</span>
-                        <span class="block font-inter font-bold text-dark-color">25</span>
-                      </li>
-                      <li class="mr-[40px] mb-[20px] inline-block">
-                        <span class="block uppercase underline">Born In</span>
-                        <span class="block font-inter font-bold text-dark-color"><a class="href_location"
-                            href="#">Pakistan</a></span>
-                      </li>
-                      <li class="mr-[40px] mb-[20px] inline-block">
-                        <span class="block uppercase underline">Mail</span>
-                        <span class="block font-inter font-bold text-dark-color"><a
-                            class="text-[#130F49] font-semibold text-[18px]"
-                            href="mailto:husnainakhtar06@gmail.com">husnainakhtar06@gmail.com</a>
-                        </span>
-                      </li>
-                      <li class="mr-[40px] mb-[20px] inline-block">
-                        <span class="block uppercase underline">Phone</span>
-                        <span class="block font-inter font-bold text-dark-color"><a href="tel:+92 347 6293 398">+92 347
-                            6293 398</a></span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="elisc_tm_counter w-full float-left mb-[90px]">
-                <ul class="ml-[-30px]">
-                  <li class="mb-[30px] float-left w-1/3 pl-[30px]">
-                    <div
-                      class="list_inner w-full float-left relative text-center py-[60px] px-[20px] rounded-[4px] overflow-hidden bg-[#D3F4EC]">
-                      <h3 class="text-[40px] mb-[7px]">03+</h3>
-                      <span class="font-medium font-karla uppercase">Years of Experience</span>
-                    </div>
-                  </li>
-                  <li class="mb-[30px] float-left w-1/3 pl-[30px]">
-                    <div
-                      class="list_inner w-full float-left relative text-center py-[60px] px-[20px] rounded-[4px] overflow-hidden bg-[#FCE8D4]">
-                      <h3 class="text-[40px] mb-[7px]">10+</h3>
-                      <span class="font-medium font-karla uppercase">Projects Completed</span>
-                    </div>
-                  </li>
-                  <li class="mb-[30px] float-left w-1/3 pl-[30px]">
-                    <div
-                      class="list_inner w-full float-left relative text-center py-[60px] px-[20px] rounded-[4px] overflow-hidden bg-[#E3F9E0]">
-                      <h3 class="text-[40px] mb-[7px]">05+</h3>
-                      <span class="font-medium font-karla uppercase">Happy Clients</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="elisc_tm_section" id="service">
-          <div class="elisc_tm_services w-full float-left pt-[110px]">
-            <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
-              <div class="elisc_tm_service_title w-full float-left flex justify-between items-end">
-                <div class="elisc_tm_title w-auto float-left">
-                  <span class="w-full float-left font-medium uppercase inline-block mb-[12px]">- Services</span>
-                  <h3 class="text-[40px] font-extrabold">Services That I Provide</h3>
-                </div>
-                <a class="text-[#130F49] font-semibold text-[18px]" href="mailto:husnainakhtar06@gmail.com">Mail Husnain</a>
-
-              </div>
-              <div class="service_list w-full float-left mt-[40px] mb-[50px]">
-                <ul class="ml-[-30px] flex flex-wrap">
-                  <li class="mb-[30px] pl-[30px] w-1/3 float-left">
-                    <div
-                      class="list_inner w-full float-left clear-both h-full relative px-[40px] pt-[32px] pb-[55px] rounded-[4px]">
-                      <div class="details w-full float-left relative z-[1]">
-                        <div class="title w-full float-left mb-[13px]">
-                          <span
-                            class="font-inter font-medium text-[20px] text-[rgba(19,15,73,.5)] inline-block mb-[15px]">01</span>
-                          <h3 class="text-[20px]">Web Development</h3>
-                        </div>
-                        <div class="text w-full float-left mb-[25px]">
-                          <p class="text-[#55527C] opacity-[0.7]">
-                            Leveraging your expertise in React.js, JavaScript, and Python, you can create dynamic and
-                            responsive web applications tailored to your clients' needs.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-[30px] pl-[30px] w-1/3 float-left">
-                    <div
-                      class="list_inner w-full float-left clear-both h-full relative px-[40px] pt-[32px] pb-[55px] rounded-[4px]">
-                      <div class="details w-full float-left relative z-[1]">
-                        <div class="title w-full float-left mb-[13px]">
-                          <span
-                            class="font-inter font-medium text-[20px] text-[rgba(19,15,73,.5)] inline-block mb-[15px]">02</span>
-                          <h3 class="text-[20px]">UI/UX Design</h3>
-                        </div>
-                        <div class="text w-full float-left mb-[25px]">
-                          <p class="text-[#55527C] opacity-[0.7]">
-                            With a creative touch, you can design intuitive and aesthetically pleasing user interfaces,
-                            ensuring that your clients' websites and applications are both functional and visually
-                            appealing.
-                          </p>
-                        </div>
-                      </div>
-                  </li>
-                  <li class="mb-[30px] pl-[30px] w-1/3 float-left">
-                    <div
-                      class="list_inner w-full float-left clear-both h-full relative px-[40px] pt-[32px] pb-[55px] rounded-[4px]">
-                      <div class="details w-full float-left relative z-[1]">
-                        <div class="title w-full float-left mb-[13px]">
-                          <span
-                            class="font-inter font-medium text-[20px] text-[rgba(19,15,73,.5)] inline-block mb-[15px]">03</span>
-                          <h3 class="text-[20px]">Front-End Development</h3>
-                        </div>
-                        <div class="text w-full float-left mb-[25px]">
-                          <p class="text-[#55527C] opacity-[0.7]">
-                            Specializing in front-end technologies like React.js, you can craft visually appealing and
-                            user-friendly interfaces that enhance the user experience.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-[30px] pl-[30px] w-1/3 float-left">
-                    <div
-                      class="list_inner w-full float-left clear-both h-full relative px-[40px] pt-[32px] pb-[55px] rounded-[4px]">
-                      <div class="details w-full float-left relative z-[1]">
-                        <div class="title w-full float-left mb-[13px]">
-                          <span
-                            class="font-inter font-medium text-[20px] text-[rgba(19,15,73,.5)] inline-block mb-[15px]">04</span>
-                          <h3 class="text-[20px]">Search Engine Optimization (SEO)</h3>
-                        </div>
-                        <div class="text w-full float-left mb-[25px]">
-                          <p class="text-[#55527C] opacity-[0.7]">
-                            Optimize websites for search engines, improving their visibility and rankings in search
-                            results, thus driving organic traffic and increasing online presence.
-                          </p>
-                        </div>
-                      </div>
-                  </li>
-                  <li class="mb-[30px] pl-[30px] w-1/3 float-left">
-                    <div
-                      class="list_inner w-full float-left clear-both h-full relative px-[40px] pt-[32px] pb-[55px] rounded-[4px]">
-                      <div class="details w-full float-left relative z-[1]">
-                        <div class="title w-full float-left mb-[13px]">
-                          <span
-                            class="font-inter font-medium text-[20px] text-[rgba(19,15,73,.5)] inline-block mb-[15px]">05</span>
-                          <h3 class="text-[20px]">Data Analysis &amp; Visualization</h3>
-                        </div>
-                        <div class="text w-full float-left mb-[25px]">
-                          <p class="text-[#55527C] opacity-[0.7]">
-                            Create visually compelling charts, graphs, and interactive dashboards to effectively
-                            communicate complex data findings to clients and stakeholders.
-                          </p>
-                        </div>
-                      </div>
-                  </li>
-                  <li class="mb-[30px] pl-[30px] w-1/3 float-left">
-                    <div
-                      class="list_inner w-full float-left clear-both h-full relative px-[40px] pt-[32px] pb-[55px] rounded-[4px]">
-                      <div class="details w-full float-left relative z-[1]">
-                        <div class="title w-full float-left mb-[13px]">
-                          <span
-                            class="font-inter font-medium text-[20px] text-[rgba(19,15,73,.5)] inline-block mb-[15px]">06</span>
-                          <h3 class="text-[20px]">Consultation and Training</h3>
-                        </div>
-                        <div class="text w-full float-left mb-[25px]">
-                          <p class="text-[#55527C] opacity-[0.7]">
-                            Offer consultation services to help clients make informed technology decisions, and provide
-                            training on using web development tools, frameworks, and content management systems.
-                          </p>
-                        </div>
-                      </div>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="elisc_tm_section" id="portfolio">
-          <div class="elisc_tm_experience w-full float-left bg-[#F3F9FF] pt-[100px] pb-[70px] px-0">
-            <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
-              <div class="elisc_tm_title w-full float-left">
-                <span class="w-full float-left font-medium uppercase inline-block mb-[12px]">- Experience</span>
-                <h3 class="text-[40px] font-extrabold">
-                  Everything about me!
-                </h3>
-              </div>
-              <div class="list w-full float-left mt-[40px]">
-                <ul class="ml-[-30px] flex flex-wrap">
-                  <li class="mb-[40px] pl-[30px] float-left w-1/2">
-                    <img class="popup_image" src="assets/img/experience/1.jpg" alt />
-                    <div
-                      class="list_inner w-full float-left clear-both bg-white rounded-[4px] px-[70px] py-[45px] relative">
-                      <div class="short w-full float-left flex justify-between mb-[16px]">
-                        <div class="job">
-                          <span class="text-yellow-color font-medium inline-block mb-[4px]">-2021 - Present</span>
-                          <h3 class="text-[20px]">Jr. Software Engineer</h3>
-                        </div>
-                        <div class="place">
-                          <span class="font-medium font-inter">- CACF</span>
-                        </div>
-                      </div>
-                      <div class="text w-full float-left">
-                        <p class="opacity-[0.7]">
-                          Website development As a Junior Software Engineer
-                          at CACF, I've gained valuable experience in
-                          React.js, Javascript, Python, Redux and have
-                          worked with multiple programming languages.
-                        </p>
-                      </div>
-                      <a class="elisc_tm_full_link absolute inset-0 z-[5]" href="#"></a>
-
-                      <div class="hidden_details">
-                        <div class="descriptions">
-                          <p>
-                            As a software engineer with expertise in
-                            React.js, JavaScript, Python, and SQL, I've had
-                            the privilege of contributing to web development
-                            and software projects during my tenure at
-                            Central Asian Cellular Forum (CACF).
-                          </p>
-                          <p>
-                            At CACF, I focused on implementing cutting-edge
-                            technology and digital solutions, gaining
-                            valuable experience in these domains.
-                          </p>
-                          <p>
-                            I remain committed to staying abreast of the
-                            latest technology trends, which enables me to
-                            create innovative solutions that deliver
-                            tangible results.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-[40px] pl-[30px] float-left w-1/2">
-                    <img class="popup_image" src="assets/img/experience/2.jpg" alt />
-                    <div
-                      class="list_inner w-full float-left clear-both bg-white rounded-[4px] px-[70px] py-[45px] relative">
-                      <div class="short w-full float-left flex justify-between mb-[16px]">
-                        <div class="job">
-                          <span class="text-yellow-color font-medium inline-block mb-[4px]">-2021 - 2021</span>
-                          <h3 class="text-[20px]">Internee</h3>
-                        </div>
-                        <div class="place">
-                          <span class="font-medium font-inter">- 3GCA/CACF</span>
-                        </div>
-                      </div>
-                      <div class="text w-full float-left">
-                        <p class="opacity-[0.7]">
-                          Internee - I obtained foundational programming
-                          knowledge during my internship at 3GCA, which has
-                          been instrumental in my career as a software
-                          engineer, particularly in web development.
-                        </p>
-                      </div>
-                      <a class="elisc_tm_full_link absolute inset-0 z-[5]" href="#"></a>
-
-                      <div class="hidden_details">
-                        <div class="descriptions">
-                          <p>
-                            My internship at 3GCA was a pivotal period in my
-                            journey as a software engineer. Working
-                            alongside a highly skilled and collaborative
-                            team, I had the opportunity to gain practical
-                            experience with a diverse range of programming
-                            languages.
-                          </p>
-                          <p>
-                            This hands-on exposure allowed me to grasp
-                            fundamental programming concepts and develop a
-                            solid foundation in coding. The supportive
-                            environment and mentorship from my colleagues
-                            were instrumental in my growth and understanding
-                            of software development.
-                          </p>
-                          <p>
-                            This internship not only broadened my technical
-                            skill set but also instilled in me a strong
-                            sense of teamwork and problem-solving. It was a
-                            formative experience that laid the groundwork
-                            for my subsequent work in web development and
-                            software engineering, where I continue to
-                            leverage this knowledge and collaborative spirit
-                            to create innovative solutions.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-[40px] pl-[30px] float-left w-1/2">
-                    <img class="popup_image" src="assets/img/experience/3.jpg" alt />
-                    <div
-                      class="list_inner w-full float-left clear-both bg-white rounded-[4px] px-[70px] py-[45px] relative">
-                      <div class="short w-full float-left flex justify-between mb-[16px]">
-                        <div class="job">
-                          <span class="text-yellow-color font-medium inline-block mb-[4px]">-2018 - 2021</span>
-                          <h3 class="text-[20px]">Freelancer</h3>
-                        </div>
-                        <div class="place">
-                          <span class="font-medium font-inter">- Fiverr</span>
-                        </div>
-                      </div>
-                      <div class="text w-full float-left">
-                        <p class="opacity-[0.7]">
-                          As a freelancer, I excelled in picture editing,
-                          HTML, CSS, Bootstrap, and JavaScript, while also
-                          mastering video editing for a well-rounded
-                          multimedia skill set.
-                        </p>
-                      </div>
-                      <a class="elisc_tm_full_link absolute inset-0 z-[5]" href="#"></a>
-
-                      <div class="hidden_details">
-                        <div class="descriptions">
-                          <p>
-                            During my time as a freelancer, I specialized in
-                            picture editing, development in HTML, CSS,
-                            Bootstrap, and JavaScript. I honed my video
-                            editing skills, allowing me to offer a
-                            comprehensive range of multimedia services to my
-                            clients.
-                          </p>
-                          <p>
-                            This experience not only sharpened my technical
-                            abilities but also cultivated my creativity and
-                            attention to detail in delivering high-quality
-                            visual content.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-[40px] pl-[30px] float-left w-1/2">
-                    <img class="popup_image" src="assets/img/experience/4.jpg" alt />
-                    <div
-                      class="list_inner w-full float-left clear-both bg-white rounded-[4px] px-[70px] py-[45px] relative">
-                      <div class="short w-full float-left flex justify-between mb-[16px]">
-                        <div class="job">
-                          <span class="text-yellow-color font-medium inline-block mb-[4px]">-2016 - 2017</span>
-                          <h3 class="text-[20px]">Teacher</h3>
-                        </div>
-                        <div class="place">
-                          <span class="font-medium font-inter">- Leads School &amp; System</span>
-                        </div>
-                      </div>
-                      <div class="text w-full float-left">
-                        <p class="opacity-[0.7]">
-                          I taught IT subjects to higher-level classes for
-                          one year, enhancing my communication skills and
-                          reinforcing my passion for technology and
-                          education.
-                        </p>
-                      </div>
-                      <a class="elisc_tm_full_link absolute inset-0 z-[5]" href="#"></a>
-
-                      <div class="hidden_details">
-                        <div class="descriptions">
-                          <p>
-                            For a span of one year, I embraced the role of
-                            an educator, focusing on instructing IT subjects
-                            to higher-level classes. This teaching journey
-                            was not only personally fulfilling but also
-                            professionally enriching. As an IT instructor,
-                            my responsibilities extended beyond conveying
-                            theoretical knowledge; I strived to ignite
-                            students' curiosity and understanding of complex
-                            IT concepts and practical applications.
-                          </p>
-                          <p>
-                            In the classroom, I fostered an engaging and
-                            interactive learning environment where students
-                            were encouraged to explore, ask questions, and
-                            collaborate. This approach not only enhanced my
-                            communication skills but also allowed me to
-                            develop effective teaching strategies to cater
-                            to diverse learning styles. It was gratifying to
-                            witness students grasp intricate IT topics,
-                            develop problem-solving abilities, and become
-                            proficient in various IT tools and technologies.
-                            This teaching experience underscored the
-                            importance of patience, adaptability, and the
-                            ability to break down complex subjects into
-                            digestible components. It not only contributed
-                            significantly to my pedagogical skills but also
-                            provided insights into the art of making
-                            technical information accessible and relatable
-                            to students.
-                          </p>
-                          <p>
-                            Ultimately, my time as an IT teacher was marked
-                            by a mutual exchange of knowledge and a shared
-                            commitment to learning. It remains a formative
-                            period in my professional journey, reinforcing
-                            my passion for technology and education, which
-                            continues to drive me in my career as a software
-                            engineer and developer.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="elisc_tm_partners w-full float-left mb-[120px] py-0 px-[20px]">
-            <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
-              <div class="elisc_tm_title w-full float-left">
-                <span class="w-full float-left font-medium uppercase inline-block mb-[12px]">- Clients</span>
-                <h3 class="text-[40px] font-extrabold">
-                  Customers &amp; clients
-                </h3>
-              </div>
-              <div class="partners_inner w-full float-left clear-both overflow-hidden rounded-[10px] mt-[58px]">
-                <ul>
-                  <li>
-                    <div class="list_inner">
-                      <img src="assets/img/partners/1.png" alt />
-                      <a class="elisc_tm_full_link absolute inset-0 z-5" a href="#"></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="list_inner">
-                      <img src="assets/img/partners/2.png" alt />
-                      <a class="elisc_tm_full_link absolute inset-0 z-5" a href="#"></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="list_inner">
-                      <img src="assets/img/partners/3.png" alt />
-                      <a class="elisc_tm_full_link absolute inset-0 z-5" a href="#"></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="list_inner">
-                      <img src="assets/img/partners/4.png" alt />
-                      <a class="elisc_tm_full_link absolute inset-0 z-5" a href="#"></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="list_inner">
-                      <img src="assets/img/partners/5.png" alt />
-                      <a class="elisc_tm_full_link absolute inset-0 z-5" a href="#"></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="list_inner">
-                      <img src="assets/img/partners/6.png" alt />
-                      <a class="elisc_tm_full_link absolute inset-0 z-5" a href="#"></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="list_inner">
-                      <img src="assets/img/partners/7.png" alt />
-                      <a class="elisc_tm_full_link absolute inset-0 z-5" a href="#"></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="list_inner">
-                      <img src="assets/img/partners/8.png" alt />
-                      <a class="elisc_tm_full_link absolute inset-0 z-5" a href="#"></a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="elisc_tm_testimonial_wrapper w-full float-left mb-[120px]">
-            <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
-              <div
-                class="elisc_tm_testimonials w-full float-left bg-[#FFF5F6] pt-[100px] pr-[150px] pb-[105px] pl-[100px] small:px-[40px]"
-                style="border-radius: 20px;">
-                <div class="elisc_tm_title w-full float-left text-center">
-                  <span class="w-full float-left font-medium uppercase inline-block mb-[12px]">- Testimonial</span>
-                  <h3 class="text-[40px] font-extrabold">
-                    What the client says?
-                  </h3>
-                </div>
-                <div class="testimonials_list w-full float-left text-center mt-[43px]">
-                  <ul class="owl-carousel owl-theme">
-                    <li>
-                      <div class="text mb-[33px]">
-                        <p class="text-[24px] leading-[40px] font-inter">
-                          I rarely like to write reviews, but Husnain Akhtar truly deserves a standing ovation for
-                          their exceptional customer support, remarkable customizations, and, most importantly, their
-                          outstanding friendliness and professionalism. It's been a pleasure working with Jamil, and I
-                          highly recommend their services.
-                        </p>
-                      </div>
-                      <div class="short w-auto flex items-center justify-center mb-[5px]">
-                        <div class="image relative w-[60px] h-[60px] rounded-full">
-                          <div class="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-full"
-                            data-img-url="assets/img/testimonials/1.jpeg"></div>
-                        </div>
-                        <div class="detail text-left pl-[18px]">
-                          <h3 class="text-[30px] font-medium">Muhammad Kamal</h3>
-                        </div>
-                      </div>
-                      <p class="job text-center">
-                        Python Back-End Developer
-                      </p>
-                    </li>
-                    <li>
-                      <div class="text mb-[33px]">
-                        <p class="text-[24px] leading-[40px] font-inter">
-                          Really, the Code Quality, Customer Support, and design provided by Husnain are absolutely
-                          awesome. The support he offer is commendable, always delivering instant solutions to our
-                          needs. I'm truly impressed and satisfied with his work. I wholeheartedly recommend Husnain's
-                          services to my friends. The exceptional quality and support are worth sharing and
-                          experiencing.
-                        </p>
-                      </div>
-                      <div class="short w-auto flex items-center justify-center mb-[5px]">
-                        <div class="image relative w-[60px] h-[60px] rounded-full">
-                          <div class="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-full"
-                            data-img-url="assets/img/testimonials/2.jpg"></div>
-                        </div>
-                        <div class="detail text-left pl-[18px]">
-                          <h3 class="text-[30px] font-medium">S. Keita Smith</h3>
-                        </div>
-                      </div>
-                      <p class="job text-center">
-                        Senior Designer
-                      </p>
-                    </li>
-                    <li>
-                      <div class="text mb-[33px]">
-                        <p class="text-[24px] leading-[40px] font-inter">
-                          Absolutely adored the template design, the comprehensive documentation, and how easily
-                          customizable it is. Husnain's customer support was outstanding! As a programming novice, I
-                          received invaluable assistance from Husnain that led to a successful outcome.Absolutely adored
-                          the template design, the comprehensive documentation, and how easily customizable it is.
-                          Husnain's customer support was outstanding! As a programming novice, I received invaluable
-                          assistance from Husnain that led to a successful outcome.
-                        </p>
-                      </div>
-                      <div class="short w-auto flex items-center justify-center mb-[5px]">
-                        <div class="image relative w-[60px] h-[60px] rounded-full">
-                          <div class="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-full"
-                            data-img-url="assets/img/testimonials/3.jpg"></div>
-                        </div>
-                        <div class="detail text-left pl-[18px]">
-                          <h3 class="text-[30px] font-medium">Geoffrey</h3>
-                        </div>
-                      </div>
-                      <p class="job text-center">
-                        Project Manager
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="elisc_tm_section" id="news">
-          <div class="elisc_tm_news fn_w_sminiboxes w-full float-left py-[120px] px-0">
-            <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
-              <div class="wrapper w-full flex justify-between">
-                <div class="left fn_w_sminibox w-1/3 pr-[50px]">
-                  <div class="elisc_tm_sticky_section">
-                    <div class="elisc_tm_title w-full float-left">
-                      <span class="w-full float-left font-medium uppercase inline-block mb-[12px]">- Skills</span>
-                      <h3 class="text-[40px] font-extrabold">My Skills</h3>
-                    </div>
-                    <div class="elisc_tm_button transition_link mt-[45px]">
-                      <a href="#contact">Get in touch</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <div>
-                  <img src="assets/img/Skills/bootstrap.png" />
-                </div>
-                <div>
-                  <img src="assets/img/Skills/css.png" />
-                </div>
-                <div>
-                  <img src="assets/img/Skills/html.png" />
-                </div>
-              </div>
-              <div class="box">
-                <div>
-                  <img src="assets/img/Skills/js.png" />
-                </div>
-                <div>
-                  <img src="assets/img/Skills/react.png" />
-                </div>
-                <div>
-                  <img src="assets/img/Skills/redux.png" />
-                </div>
-              </div>
-              <div class="box">
-                <div>
-                  <img src="assets/img/Skills/typescript.png" />
-                </div>
-                <div>
-                  <img src="assets/img/Skills/git.png" />
-                </div>
-                <div>
-                  <img src="assets/img/Skills/python.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="elisc_tm_section" id="contact">
-          <div class="elisc_tm_contact w-full min-h-[100vh] float-left bg-[#E9F9FF] pt-[120px]">
-            <div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
-              <div class="wrapper w-full float-left flex">
-                <div class="left w-1/2 pr-[50px]">
-                  <div class="elisc_tm_title w-full float-left">
-                    <span class="w-full float-left font-medium uppercase inline-block mb-[12px]">- Let's Connect</span>
-                    <h3 class="text-[40px] font-extrabold">Get in touch</h3>
-                  </div>
-                  <div class="text w-full float-left mt-[20px] mb-[40px]">
-                    <p>
-                      I'm currently available and enthusiastic about taking on new projects. Whether you have questions,
-                      ideas, or need assistance, please feel free to reach out. You can contact me through Fiverr, and
-                      I'm also available via phone and email. I'm here to support you, and I look forward to connecting
-                      with you soon.
-                    </p>
-                  </div>
-                  <div class="info w-full float-left">
-                    <ul class="relative">
-                      <li class="pl-[15px]">
-                        <a class="text-[#130F49] font-semibold text-[18px]" href="tel:+92 347 6293 398">+92 347 6293
-                          398</a>
-                      </li>
-                      <li class="pl-[15px]">
-                        <a class="text-[#130F49] font-semibold text-[18px]"
-                          href="mailto:husnainakhtar06@gmail.com">husnainakhtar06@gmail.com</a>
-                      </li>
-                      <li class="pl-[15px]">
-                        <a class="href_location text-[#130F49] font-semibold text-[18px]" href="#">Faisal Avenue
-                          Islamabad, Pakistan</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget'
-                  style='display: flex; border-radius: 25px !important; justify-content: center;'>
-                  <a itemprop='url' href=https://www.fiverr.com/husnainwrites rel="nofollow" target="_blank"
-                    style='display: inline-block;border-radius: 25px !important; background: #E9F9FF;'>
-                    <div class='fiverr-seller-content'
-                      id='fiverr-seller-widget-content-2c0332e9-412f-447d-98e9-ccb4e29acc2e' itemprop='contentURL'
-                      style='display: none;'></div>
-                    <div id='fiverr-widget-seller-data' style='display: none;'>
-                      <div itemprop='name'>husnainwrites</div>
-                      <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
-                      <div itemprop='jobtitle'>Seller - Web Developer</div>
-                      <div itemprop='description'>I'm Husnain Akhtar, a dedicated Front-End Web Developer based in
-                        Pakistan with over 3 years of experience. My passion for creating exceptional web experiences
-                        drives me to stay updated with the latest trends. I specialize in React js, Next js, Tailwind
-                        CSS, Antd UI, and React Bootstrap, ensuring your web project is not only visually appealing but
-                        also responsive, SEO friendly, and delivered on time. I'm committed to quality, transparent
-                        communication, and client satisfaction. Let's collaborate to bring your web project to life.
-                      </div>
-                    </div>
+            <!-- Social Media Profiles Starts -->
+            <div class="social">
+              <ul>
+                 <li>
+                    <a href="#" target="_blank">
+                    <i class="icon-twitter"></i>
+                    </a>
+                 </li>
+                 <li>
+                  <a href="#" target="_blank">
+                  <i class="icon-linkedin"></i>
                   </a>
-                </div>
-              </div>
-              <div class="elisc_tm_map w-full float-left mt-[100px] mb-[120px]">
-                <div class="mapouter">
-                  <div class="gmap_canvas">
-                    <iframe width="100%" height="375" id="gmap_canvas"
-                      src="https://www.google.com/maps?q=F7/2, Islamabad, Pakistan&output=embed" frameborder="0"
-                      scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                      href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon"></a><br />
-                    <style>
-                      .mapouter {
-                        position: relative;
-                        text-align: right;
-                        height: 375px;
-                        width: 100%;
-                      }
-                    </style><a href="https://www.embedgooglemap.net/">how to add google map</a>
-                    <style>
-                      .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 375px;
-                        width: 100%;
-                      }
-                    </style>
-                  </div>
-                </div>
-              </div>
+               </li>
+                 <li>
+                    <a href="#" target="_blank">
+                    <i class="icon-github"></i>
+                    </a>
+                 </li>
+                 <li>
+                    <a href="#" target="_blank">
+                    <i class="icon-instagram"></i>
+                    </a>
+                 </li>
+              </ul>
+           </div>
+           <!-- Social Media Profiles Ends -->
+         </div>
+         <!-- Contacts Ends -->
+         <!-- Skin Switcher Starts -->
+         <div class="skin">
+            <span>Light</span>
+            <div>
+               <input type="checkbox" class="checkbox" id="checkbox">
+               <label for="checkbox" class="checkbox-label">
+                  <svg width="14" class="light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                     <path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/>
+                  </svg>
+                  <svg width="13" class="dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                     <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/>
+                  </svg>
+                  <span class="ball"></span>
+               </label>
             </div>
-          </div>
-        </div>
+            <span>Dark</span>
+         </div>
+         <!-- Skin Switcher Ends -->
+         <!-- Copyright Starts -->
+         <div class="leftbottom">
+           <span>&copy; 2023 Steven</span>
+           <a href="blog.html">
+             My Blog
+           </a>
+         </div>
+         <!-- Copyright Ends -->
       </div>
-    </div>
+      <!-- Home Section Ends -->
+      <!-- Portfolio Section Starts -->
+      <div class="main-section portfolio-grid">
+         <!-- Back Home Starts -->
+         <div class="back-home" id="back-home">
+            <div class="squares">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+            </div>
+         </div>
+         <!-- Back Home Ends -->
+         <!-- Portfolio Grid Starts -->
+         <div class="grid-container">
+            <!-- Portfolio Heading Starts -->
+            <div class="heading">
+               <h2>Portfolio</h2>
+               <p>A few recent design and coding projects</p>
+            </div>
+            <!-- Portfolio Heading Ends -->
+            <!-- Portfolio Items Starts -->
+            <ul class="grid">
+               <!-- Portfolio Single Item Starts -->
+               <li class="item" onclick="openItem(this)">
+                  <img src="img/projects/project-1.jpg" alt="">
+                  <div class="title">
+                     <span>London</span>
+                  </div>
+               </li>
+               <!-- Portfolio Single Item Ends -->
+               <!-- Portfolio Single Item Starts -->
+               <li class="item" onclick="openItem(this)">
+                  <img src="img/projects/project-2.jpg" alt="">
+                  <div class="title">
+                     <span>Paris</span>
+                  </div>
+               </li>
+               <!-- Portfolio Single Item Ends -->
+               <!-- Portfolio Single Item Starts -->
+               <li class="item" onclick="openItem(this)">
+                  <img src="img/projects/project-3.jpg" alt="">
+                  <div class="title">
+                     <span>Moscow</span>
+                  </div>
+               </li>
+               <!-- Portfolio Single Item Ends -->
+               <!-- Portfolio Single Item Starts -->
+               <li class="item" onclick="openItem(this)">
+                  <img src="img/projects/project-4.jpg" alt="">
+                  <div class="title">
+                     <span>New York</span>
+                  </div>
+               </li>
+               <!-- Portfolio Single Item Ends -->
+               <!-- Portfolio Single Item Starts -->
+               <li class="item" onclick="openItem(this)">
+                  <img src="img/projects/project-5.jpg" alt="">
+                  <div class="title">
+                     <span>Tokyo</span>
+                  </div>
+               </li>
+               <!-- Portfolio Single Item Ends -->
+               <!-- Portfolio Single Item Starts -->
+               <li class="item" onclick="openItem(this)">
+                  <img src="img/projects/project-6.jpg" alt="">
+                  <div class="title">
+                     <span>Budapest</span>
+                  </div>
+               </li>
+               <!-- Portfolio Single Item Ends -->
+               <!-- Portfolio Single Item Starts -->
+               <li class="item" onclick="openItem(this)">
+                  <img src="img/projects/project-7.jpg" alt="">
+                  <div class="title">
+                     <span>Sydney</span>
+                  </div>
+               </li>
+               <!-- Portfolio Single Item Ends -->
+               <!-- Portfolio Single Item Starts -->
+               <li class="item" onclick="openItem(this)">
+                  <img src="img/projects/project-8.jpg" alt="">
+                  <div class="title">
+                     <span>Amsterdam</span>
+                  </div>
+               </li>
+               <!-- Portfolio Single Item Ends -->
+            </ul>
+            <!-- Portfolio Items Ends -->
+         </div>
+         <!-- Portfolio Grid Ends -->
+         <!-- Skin Switcher Starts -->
+         <div class="skin">
+            <span>Light</span>
+            <div>
+               <input type="checkbox" class="checkbox" id="checkbox2">
+               <label for="checkbox2" class="checkbox-label">
+                  <svg width="14" class="light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                     <path fill="#fb6977" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/>
+                  </svg>
+                  <svg width="13" class="dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                     <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/>
+                  </svg>
+                  <span class="ball"></span>
+               </label>
+            </div>
+            <span>Dark</span>
+         </div>
+         <!-- Skin Switcher Ends -->
+      </div>
+      <!-- Portfolio Section Ends -->
+      <!-- Portfolio Items Details Starts -->
+      <div class="portfolio-items">
+         <!-- Single Project Details Starts -->
+         <div class="single-project-item" id="project-1">
+            <!-- Back Portfolio Starts -->
+            <div class="back-to-portfolio" onclick="backToPorfolio()">
+               <div class="squares">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            <!-- Back Portfolio Ends -->
+            <div>
+               <!-- Portfolio Single Item Details Starts -->
+               <div class="details">
+                  <div class="heading">
+                     <img src="img/projects/project-1-big.jpg" alt="">
+                     <div>
+                        <div>
+                           <h2>London</h2>
+                           <span>Mobile App</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <ul>
+                        <li>
+                           <span>Client :</span>
+                           <span>Themeforest</span>
+                        </li>
+                        <li>
+                           <span>Duration :</span>
+                           <span>3 months</span>
+                        </li>
+                        <li>
+                           <span>Role :</span>
+                           <span>Frontend</span>
+                        </li>
+                        <li>
+                           <span> Frameworks : </span>
+                           <span>WordPress, React JS</span>
+                        </li>
+                     </ul>
+                     <a href="#" target="_blank" class="btn-secondary">
+                        <div>
+                           <span> Preview </span>
+                           <span> Preview </span>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Portfolio Single Item Details Ends -->
+               <!-- Portfolio Navigation Starts -->
+               <div class="arrows">
+                  <div>
+                     <div class="arrow up top-project" onclick="TopProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="arrow down bottom-project" onclick="BottomProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Portfolio Navigation Ends -->
+            </div>
+         </div>
+         <!-- Single Project Details Ends -->
+         <!-- Single Project Details Starts -->
+         <div class="single-project-item" id="project-2">
+            <!-- Back Portfolio Starts -->
+            <div class="back-to-portfolio" onclick="backToPorfolio()">
+               <div class="squares">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            <!-- Back Portfolio Ends -->
+            <div>
+               <!-- Portfolio Single Item Details Starts -->
+               <div class="details">
+                  <div class="heading">
+                     <img src="img/projects/project-2-big.jpg" alt="">
+                     <div>
+                        <div>
+                           <h2>Paris</h2>
+                           <span>Web App</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <ul>
+                        <li>
+                           <span>Client :</span>
+                           <span>Codecanyon</span>
+                        </li>
+                        <li>
+                           <span>Duration :</span>
+                           <span>1 month</span>
+                        </li>
+                        <li>
+                           <span>Role :</span>
+                           <span>Designer</span>
+                        </li>
+                        <li>
+                           <span>Frameworks : </span>
+                           <span>Adobe Photoshop</span>
+                        </li>
+                     </ul>
+                     <a href="#" target="_blank" class="btn-secondary">
+                        <div>
+                           <span> Preview </span>
+                           <span> Preview </span>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Portfolio Single Item Details Ends -->
+               <!-- Portfolio Navigation Starts -->
+               <div class="arrows">
+                  <div>
+                     <div class="arrow up top-project" onclick="TopProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="arrow down bottom-project" onclick="BottomProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Portfolio Navigation Ends -->
+            </div>
+         </div>
+         <!-- Single Project Details Ends -->
+         <!-- Single Project Details Starts -->
+         <div class="single-project-item" id="project-3">
+            <!-- Back Portfolio Starts -->
+            <div class="back-to-portfolio" onclick="backToPorfolio()">
+               <div class="squares">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            <!-- Back Portfolio Ends -->
+            <div>
+               <!-- Portfolio Single Item Details Starts -->
+               <div class="details">
+                  <div class="heading">
+                     <img src="img/projects/project-3-big.jpg" alt="">
+                     <div>
+                        <div>
+                           <h2>Moscow</h2>
+                           <span>Mobile App</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <ul>
+                        <li>
+                           <span>Client :</span>
+                           <span>Graphicriver</span>
+                        </li>
+                        <li>
+                           <span>Duration :</span>
+                           <span>10 months</span>
+                        </li>
+                        <li>
+                           <span>Role :</span>
+                           <span>Backend</span>
+                        </li>
+                        <li>
+                           <span>Frameworks : </span>
+                           <span>Java, Spring Boot</span>
+                        </li>
+                     </ul>
+                     <a href="#" target="_blank" class="btn-secondary">
+                        <div>
+                           <span> Preview </span>
+                           <span> Preview </span>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Portfolio Single Item Details Ends -->
+               <!-- Portfolio Navigation Starts -->
+               <div class="arrows">
+                  <div>
+                     <div class="arrow up top-project" onclick="TopProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="arrow down bottom-project" onclick="BottomProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Portfolio Navigation Ends -->
+            </div>
+         </div>
+         <!-- Single Project Details Ends -->
+         <!-- Single Project Details Starts -->
+         <div class="single-project-item" id="project-4">
+            <!-- Back Portfolio Starts -->
+            <div class="back-to-portfolio" onclick="backToPorfolio()">
+               <div class="squares">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            <!-- Back Portfolio Ends -->
+            <div>
+               <!-- Portfolio Single Item Details Starts -->
+               <div class="details">
+                  <div class="heading">
+                     <img src="img/projects/project-4-big.jpg" alt="">
+                     <div>
+                        <div>
+                           <h2>New York</h2>
+                           <span>Web App</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <ul>
+                        <li>
+                           <span>Client :</span>
+                           <span>Videohive</span>
+                        </li>
+                        <li>
+                           <span>Duration :</span>
+                           <span>2 years</span>
+                        </li>
+                        <li>
+                           <span>Role :</span>
+                           <span>Manager</span>
+                        </li>
+                        <li>
+                           <span>Frameworks : </span>
+                           <span>Jira, Google Sheets</span>
+                        </li>
+                     </ul>
+                     <a href="#" target="_blank" class="btn-secondary">
+                        <div>
+                           <span> Preview </span>
+                           <span> Preview </span>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Portfolio Single Item Details Ends -->
+               <!-- Portfolio Navigation Starts -->
+               <div class="arrows">
+                  <div>
+                     <div class="arrow up top-project" onclick="TopProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="arrow down bottom-project" onclick="BottomProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Portfolio Navigation Ends -->
+            </div>
+         </div>
+         <!-- Single Project Details Ends -->
+         <!-- Single Project Details Starts -->
+         <div class="single-project-item" id="project-5">
+            <!-- Back Portfolio Starts -->
+            <div class="back-to-portfolio" onclick="backToPorfolio()">
+               <div class="squares">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            <!-- Back Portfolio Ends -->
+            <div>
+               <!-- Portfolio Single Item Details Starts -->
+               <div class="details">
+                  <div class="heading">
+                     <img src="img/projects/project-5-big.jpg" alt="">
+                     <div>
+                        <div>
+                           <h2>Tokyo</h2>
+                           <span>Mobile App</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <ul>
+                        <li>
+                           <span>Client :</span>
+                           <span>Audiojungle</span>
+                        </li>
+                        <li>
+                           <span>Duration :</span>
+                           <span>4 months</span>
+                        </li>
+                        <li>
+                           <span>Role :</span>
+                           <span>Frontend</span>
+                        </li>
+                        <li>
+                           <span>Frameworks :</span>
+                           <span>Html, Css, jQuery</span>
+                        </li>
+                     </ul>
+                     <a href="#" target="_blank" class="btn-secondary">
+                        <div>
+                           <span> Preview </span>
+                           <span> Preview </span>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Portfolio Single Item Details Ends -->
+               <!-- Portfolio Navigation Starts -->
+               <div class="arrows">
+                  <div>
+                     <div class="arrow up top-project" onclick="TopProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="arrow down bottom-project" onclick="BottomProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Portfolio Navigation Ends -->
+            </div>
+         </div>
+         <!-- Single Project Details Ends -->
+         <!-- Single Project Details Starts -->
+         <div class="single-project-item" id="project-6">
+            <!-- Back Portfolio Starts -->
+            <div class="back-to-portfolio" onclick="backToPorfolio()">
+               <div class="squares">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            <!-- Back Portfolio Ends -->
+            <div>
+               <!-- Portfolio Single Item Details Starts -->
+               <div class="details">
+                  <div class="heading">
+                     <img src="img/projects/project-6-big.jpg" alt="">
+                     <div>
+                        <div>
+                           <h2>Budapest</h2>
+                           <span>Web App</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <ul>
+                        <li>
+                           <span>Client :</span>
+                           <span>Photodune</span>
+                        </li>
+                        <li>
+                           <span>Duration :</span>
+                           <span>7 months</span>
+                        </li>
+                        <li>
+                           <span>Role :</span>
+                           <span>Tech Lead</span>
+                        </li>
+                        <li>
+                           <span> Frameworks : </span>
+                           <span>Next JS, React</span>
+                        </li>
+                     </ul>
+                     <a href="#" target="_blank" class="btn-secondary">
+                        <div>
+                           <span> Preview </span>
+                           <span> Preview </span>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Portfolio Single Item Details Ends -->
+               <!-- Portfolio Navigation Starts -->
+               <div class="arrows">
+                  <div>
+                     <div class="arrow up top-project" onclick="TopProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="arrow down bottom-project" onclick="BottomProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Portfolio Navigation Ends -->
+            </div>
+         </div>
+         <!-- Single Project Details Ends -->
+         <!-- Single Project Details Starts -->
+         <div class="single-project-item" id="project-7">
+            <!-- Back Portfolio Starts -->
+            <div class="back-to-portfolio" onclick="backToPorfolio()">
+               <div class="squares">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            <!-- Back Portfolio Ends -->
+            <div>
+               <!-- Portfolio Single Item Details Starts -->
+               <div class="details">
+                  <div class="heading">
+                     <img src="img/projects/project-7-big.jpg" alt="">
+                     <div>
+                        <div>
+                           <h2>Sydney</h2>
+                           <span>Mobile App</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <ul>
+                        <li>
+                           <span>Client :</span>
+                           <span>3D Ocean</span>
+                        </li>
+                        <li>
+                           <span>Duration :</span>
+                           <span>10 months</span>
+                        </li>
+                        <li>
+                           <span>Role :</span>
+                           <span>Backend</span>
+                        </li>
+                        <li>
+                           <span>Frameworks :</span>
+                           <span>MySQL, Node JS</span>
+                        </li>
+                     </ul>
+                     <a href="#" target="_blank" class="btn-secondary">
+                        <div>
+                           <span> Preview </span>
+                           <span> Preview </span>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Portfolio Single Item Details Ends -->
+               <!-- Portfolio Navigation Starts -->
+               <div class="arrows">
+                  <div>
+                     <div class="arrow up top-project" onclick="TopProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="arrow down bottom-project" onclick="BottomProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Portfolio Navigation Ends -->
+            </div>
+         </div>
+         <!-- Single Project Details Ends -->
+         <!-- Single Project Details Starts -->
+         <div class="single-project-item" id="project-8">
+            <!-- Back Portfolio Starts -->
+            <div class="back-to-portfolio" onclick="backToPorfolio()">
+               <div class="squares">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            <!-- Back Portfolio Ends -->
+            <div>
+               <!-- Portfolio Single Item Details Starts -->
+               <div class="details">
+                  <div class="heading">
+                     <img src="img/projects/project-8-big.jpg" alt="">
+                     <div>
+                        <div>
+                           <h2>Amsterdam</h2>
+                           <span>Web App</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <ul>
+                        <li>
+                           <span>Client :</span>
+                           <span>Envato</span>
+                        </li>
+                        <li>
+                           <span>Duration :</span>
+                           <span>1 month</span>
+                        </li>
+                        <li>
+                           <span>Role :</span>
+                           <span>UI/UX Designer</span>
+                        </li>
+                        <li>
+                           <span>Frameworks :</span>
+                           <span>Sketch, Figma</span>
+                        </li>
+                     </ul>
+                     <a href="#" target="_blank" class="btn-secondary">
+                        <div>
+                           <span> Preview </span>
+                           <span> Preview </span>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <!-- Portfolio Single Item Details Ends -->
+               <!-- Portfolio Navigation Starts -->
+               <div class="arrows">
+                  <div>
+                     <div class="arrow up top-project" onclick="TopProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 19 L 20.5 13 L 26 19 L 23 19 L 23 25 L 18 25 L 18 19 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="arrow down bottom-project" onclick="BottomProject()">
+                        <div class="arrow-inner">
+                           <svg class="main-arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                           <svg class="hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                              <path d="M 15 21 L 20.5 27 L 26 21 L 23 21 L 23 15 L 18 15 L 18 21 z"></path>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Portfolio Navigation Ends -->
+            </div>
+         </div>
+         <!-- Single Project Details Ends -->
+      </div>
+      <!-- Portfolio Items Details Ends -->
+      <!-- About Section Starts -->
+      <div id="about" class="about">
+         <div class="overlay" id="overlay"></div>
+         <div class="content" id="content">
+            <!-- Close About Section Starts -->
+            <div class="close" id="close">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero">
+                  <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none" style="mix-blend-mode: normal">
+                     <g transform="scale(8.53333,8.53333)">
+                        <path d="M7,4c-0.25587,0 -0.51203,0.09747 -0.70703,0.29297l-2,2c-0.391,0.391 -0.391,1.02406 0,1.41406l7.29297,7.29297l-7.29297,7.29297c-0.391,0.391 -0.391,1.02406 0,1.41406l2,2c0.391,0.391 1.02406,0.391 1.41406,0l7.29297,-7.29297l7.29297,7.29297c0.39,0.391 1.02406,0.391 1.41406,0l2,-2c0.391,-0.391 0.391,-1.02406 0,-1.41406l-7.29297,-7.29297l7.29297,-7.29297c0.391,-0.39 0.391,-1.02406 0,-1.41406l-2,-2c-0.391,-0.391 -1.02406,-0.391 -1.41406,0l-7.29297,7.29297l-7.29297,-7.29297c-0.1955,-0.1955 -0.45116,-0.29297 -0.70703,-0.29297z"></path>
+                     </g>
+                  </g>
+               </svg>
+            </div>
+            <!-- Close About Section Ends -->
+            <!-- About Content Starts -->
+            <div class="content-container" id="contentcontainer">
+               <!-- Photo Starts -->
+               <div class="img-container">
+                 <picture>
+                     <source media="(min-width:990px)" srcset="img/mypicture.jpg">
+                     <img src="img/mypicture-160x160.jpg" alt="mobile picture">
+                  </picture>
+               </div>
+               <!-- Photo Ends -->
+               <!-- Personal Informations Starts -->
+               <div>
+                  <div class="infos-about">
+                     <h3>Steven Smith</h3>
+                     <div class="infos-about-inner">
+                        <table class="">
+                           <tr>
+                              <td>Job</td>
+                              <td>Web Developer</td>
+                           </tr>
+                           <tr>
+                              <td>Age</td>
+                              <td>27 years</td>
+                           </tr>
+                           <tr>
+                              <td>Nationality</td>
+                              <td>British</td>
+                           </tr>
+                        </table>
+                        <table>
+                           <tr>
+                              <td>Freelance</td>
+                              <td>Available</td>
+                           </tr>
+                           <tr>
+                              <td>Langages</td>
+                              <td>English, French</td>
+                           </tr>
+                           <tr>
+                              <td>Resume</td>
+                              <td><a class="accent" href="#">Download</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="facts">
+                        <div class="box-stats">
+                           <h4>13</h4>
+                           <p>years <span>experience</span>
+                           </p>
+                        </div>
+                        <div class="box-stats">
+                           <h4>45</h4>
+                           <p>completed <span>projects</span>
+                           </p>
+                        </div>
+                        <div class="box-stats">
+                           <h4>39</h4>
+                           <p>Happy <span>customers</span>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Personal Informations Ends -->
+            </div>
+            <!-- About Content Ends -->
+         </div>
+      </div>
+      <!-- About Section Ends -->
+      <!-- Animated Layers Starts -->
+      <div class="layers active-layer opacity-0">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+      <div class="layers not-active-layer">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+      <!-- Animated Layers Ends -->
+      <!-- Template JS File -->
+      <script src="js/custom.js"></script>
+      <!-- Color Switcher JS File / Only Demo -->
+      <script src="js/colorswitcher.js"></script>
+   </body>
 
-    <div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
-  </div>
-
-  <script id='fiverr-seller-widget-script-2c0332e9-412f-447d-98e9-ccb4e29acc2e'
-    src='https://widgets.fiverr.com/api/v1/seller/husnainwrites?widget_id=2c0332e9-412f-447d-98e9-ccb4e29acc2e'
-    data-config='{"category_name":"Programming \u0026 Tech"}' async='true' defer='true'></script>
-
-  <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-  <script src="assets/js/jquery.js"></script>
-  <!--[if lt IE 10]>
-      <script type="text/javascript" src="js/ie8.js"></script>
-    <![endif]-->
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/init.js"></script>
-</body>
-
+<!-- Mirrored from slimhamdi.net/monji/demos/light-skinswitcher-sound.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 17 Sep 2023 14:53:12 GMT -->
 </html>
