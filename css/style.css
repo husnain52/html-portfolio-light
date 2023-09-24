@@ -71,7 +71,6 @@ body {
   color: inherit;
 }
 
-
 /*** Preloader ***/
 
 .loader-wrapper {
@@ -1635,6 +1634,10 @@ body.dark {
   backface-visibility: hidden;
 }
 
+.portfolio-grid ul#skills {
+  margin-top: 20px;
+}
+
 .portfolio-grid ul.grid li img {
   max-width: 100%;
   height: 100%;
@@ -3001,6 +3004,12 @@ body.dark {
     margin: 0 0 25px;
   }
 
+  .portfolio-grid ul#skills li {
+    width: 29%;
+    height: 100%;
+    margin: 20px;
+  }
+
   .portfolio-grid .heading {
     padding: 110px 30px 40px;
   }
@@ -3129,8 +3138,8 @@ body.dark {
     bottom: 0;
     transform: none;
     height: auto;
-    font-size: 20px;
-    padding: 14px 30px;
+    font-size: 11px;
+    padding: 7px;
     top: initial;
   }
 
