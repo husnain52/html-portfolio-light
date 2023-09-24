@@ -2998,6 +2998,12 @@ body.dark {
     padding: 0 30px;
   }
 
+  .portfolio-grid ul#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .portfolio-grid ul.grid li {
     width: 100%;
     height: 100%;
